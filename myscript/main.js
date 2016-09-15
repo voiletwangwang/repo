@@ -136,28 +136,29 @@ function generateOneNumber() {
 
 // --------------------------------------------------------------------------------------------------------------------
 //判断滑动方向
-$(document).on('swipeleft', function(){
+$('#grid-container').on('swipeleft', function(){
+    alert('a');
     event.preventDefault();
     if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
-$(document).on('swiperight', function(){
+$('#grid-container').on('swiperight', function(){
     event.preventDefault();
     if (moveRight()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
-$(document).on('swipeup', function(){
+$('#grid-container').on('swipeup', function(){
     event.preventDefault();
     if (moveUp()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
-$(document).on('swipedown', function(){
+$('#grid-container').on('swipedown', function(){
     event.preventDefault();
     if (moveDown()) {
                 setTimeout("generateOneNumber()", 210);
