@@ -160,7 +160,7 @@ function generateOneNumber() {
         },
             swipeDown:function(){
             // 向右滑动执行
-           if (moveUp()) {
+           if (moveDown()) {
                     setTimeout("generateOneNumber()", 210);
                     setTimeout("isgameOver()", 300);
                 }; 
