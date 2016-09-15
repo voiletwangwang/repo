@@ -138,7 +138,6 @@ function generateOneNumber() {
 //判断滑动方向
 $(document).on('pagecreate','#pagaone', function(){
     $('#grid-container').on('swipeleft', function(){
-    alert('a');
     if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
