@@ -136,30 +136,32 @@ function generateOneNumber() {
 
 // --------------------------------------------------------------------------------------------------------------------
 //判断滑动方向
-$('#grid-container').on('swipeleft', function(){
+$(document).on('pagecreate','#pagaone', function(){
+    $('#grid-container').on('swipeleft', function(){
     alert('a');
     if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
-})
-$('#grid-container').on('swiperight', function(){
-    if (moveRight()) {
-                setTimeout("generateOneNumber()", 210);
-                setTimeout("isgameOver()", 300);
-            };  
-})
-$('#grid-container').on('swipeup', function(){
-    if (moveUp()) {
-                setTimeout("generateOneNumber()", 210);
-                setTimeout("isgameOver()", 300);
-            };  
-})
-$('#grid-container').on('swipedown', function(){
-    if (moveDown()) {
-                setTimeout("generateOneNumber()", 210);
-                setTimeout("isgameOver()", 300);
-            };  
+    })
+    $('#grid-container').on('swiperight', function(){
+        if (moveRight()) {
+                    setTimeout("generateOneNumber()", 210);
+                    setTimeout("isgameOver()", 300);
+                };  
+    })
+    $('#grid-container').on('swipeup', function(){
+        if (moveUp()) {
+                    setTimeout("generateOneNumber()", 210);
+                    setTimeout("isgameOver()", 300);
+                };  
+    })
+    $('#grid-container').on('swipedown', function(){
+        if (moveDown()) {
+                    setTimeout("generateOneNumber()", 210);
+                    setTimeout("isgameOver()", 300);
+                };  
+    })
 })
 
 // 判断键盘的响应时间 上下左右
