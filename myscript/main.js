@@ -136,33 +136,36 @@ function generateOneNumber() {
 
 // --------------------------------------------------------------------------------------------------------------------
 //判断滑动方向
-$(document).on('pagecreate','#pagaone', function(){
-    $('#grid-container').on('swipeleft', function(){
-    if (moveLeft()) {
-                setTimeout("generateOneNumber()", 210);
-                setTimeout("isgameOver()", 300);
-            };  
-    })
-    $('#grid-container').on('swiperight', function(){
-        if (moveRight()) {
+    $(document).swipe({
+        swipeLeft:function(){
+            // 向左滑动执行
+            if (moveLeft()) {
                     setTimeout("generateOneNumber()", 210);
                     setTimeout("isgameOver()", 300);
                 };  
-    })
-    $('#grid-container').on('swipeup', function(){
-        if (moveUp()) {
+        },
+        swipeRight:function(){
+            // 向右滑动执行
+            if (moveRight()) {
                     setTimeout("generateOneNumber()", 210);
                     setTimeout("isgameOver()", 300);
                 };  
-    })
-    $('#grid-container').on('swipedown', function(){
-        if (moveDown()) {
+        },
+            swipeUp:function(){
+            // 向右滑动执行
+            if (moveUp()) {
                     setTimeout("generateOneNumber()", 210);
                     setTimeout("isgameOver()", 300);
                 };  
-    })
-})
-
+        },
+            swipeDown:function(){
+            // 向右滑动执行
+           if (moveUp()) {
+                    setTimeout("generateOneNumber()", 210);
+                    setTimeout("isgameOver()", 300);
+                }; 
+        }
+    });
 // 判断键盘的响应时间 上下左右
 $(document).keydown(function (event) {
     event.preventDefault();
