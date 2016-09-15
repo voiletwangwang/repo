@@ -138,28 +138,24 @@ function generateOneNumber() {
 //判断滑动方向
 $('#grid-container').on('swipeleft', function(){
     alert('a');
-    event.preventDefault();
     if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
 $('#grid-container').on('swiperight', function(){
-    event.preventDefault();
     if (moveRight()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
 $('#grid-container').on('swipeup', function(){
-    event.preventDefault();
     if (moveUp()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
             };  
 })
 $('#grid-container').on('swipedown', function(){
-    event.preventDefault();
     if (moveDown()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameOver()", 300);
