@@ -135,6 +135,36 @@ function generateOneNumber() {
 }
 
 // --------------------------------------------------------------------------------------------------------------------
+//判断滑动方向
+$(document).on('swipeleft', function(){
+    event.preventDefault();
+    if (moveLeft()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isgameOver()", 300);
+            };  
+})
+$(document).on('swiperight', function(){
+    event.preventDefault();
+    if (moveRight()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isgameOver()", 300);
+            };  
+})
+$(document).on('swipeup', function(){
+    event.preventDefault();
+    if (moveUp()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isgameOver()", 300);
+            };  
+})
+$(document).on('swipedown', function(){
+    event.preventDefault();
+    if (moveDown()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isgameOver()", 300);
+            };  
+})
+
 // 判断键盘的响应时间 上下左右
 $(document).keydown(function (event) {
     event.preventDefault();

@@ -90,3 +90,12 @@ header p {
     position: absolute;
     color: #000;
 }
+
+@media (max-width){
+	#grid-container{
+		    width: 262.4px;
+    height: 262.4px;
+    padding: 12.8px;
+    border-radius: 5.76px;
+	}
+}
