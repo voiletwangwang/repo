@@ -91,7 +91,7 @@ header p {
     color: #000;
 }
 
-@media (max-width){
+@media (max-width : 414px){
 	#grid-container{
 		    width: 262.4px;
     height: 262.4px;
